@@ -7,26 +7,27 @@
 
 	<title>Varför Git är bättre än X</title>
 	
-	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
 	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-  <script src="javascripts/main.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
 	
 	<style type="text/css">
 		html { overflow-y: scroll; }
+		body { margin-top: 1.5em; }
 		.header h1 { font-size: 3.5em; color: #666; }
-		.expand_collapse_links { text-align: center; }
+		.expand_collapse_links { text-align: center; margin-bottom: 1.5em; display: none; }
 		.expand_collapse_links a { color: #555; }
 		img { margin-bottom: 10px; }
+		.center { text-align: center; }
 		.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify;}
 		.intro { color: #444; }
 		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
     .section h2 a { color: #333; text-decoration:none; display: block; }
-		.section { margin-bottom: 20px; }
-		.contents { padding: 0 10px; }
+		.section { padding-bottom: 2px; }
+		.contents { padding: 0 10px; width: 610px; }
 		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
 		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
@@ -34,23 +35,27 @@
 		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
 		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
 		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+		.nowrap { white-space: nowrap; }
 		.sweet { color: #363; background: #beb; }
 		.compare { color: #663; background: #eeb; }
 		.help pre { font-size: 12px; }
 		.help td { vertical-align: top; }
 		code { font-size: 90%; }
 		.footer { text-align: center; color: #663; background-color: #eea; padding: 10px;}
-		.footer a { color: #440; }
+		.footer a { color: #440; } 
+		.footer-lang { text-align: center; color: #443; background-color: #dda; padding: 5px; font-size: 90%; }
+		.footer-lang a { color: #330; } 
+    .footer-badges { text-align: center; }
+    .footer-badges a { color: #777; }
+		.lang a {color: inherit; text-decoration: none;}
+    .note { text-decoration: italic; color: #666; padding: 1em; }
 	</style>
 	
 </head>
 
 <body>
-
 	<div class="container">
 
-			<br/>
-			
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
@@ -62,7 +67,7 @@
 							<span class="lang svn">svn</span>
 							<span class="lang perforce">perforce</span>
 						</div>
-						<img style="float: right" src="images/wherex.gif">
+						<img style="float: right" alt="where &quot;x&quot; is one of" src="images/wherex.gif" />
 					</td></tr>
 					</table>
 	    </div>
@@ -78,13 +83,11 @@
             argument för att visa det.
 					</div>
 					
-					<div class="expand_collapse_links" style="display: none;">
+					<div class="expand_collapse_links">
 					  <a href="#" class="expand_all">Expandera alla</a> |
 					  <a href="#" class="collapse_all">Kontrahera alla</a>
 					</div>
 	    </div>
-
-			<br/>
 
 	    <div class="span-24 section">
 					<div class="args">
@@ -144,7 +147,7 @@
 							</ul>
 						</div>
 						
-						<img src="images/branches.png">
+						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
               Viktigt att förstå är att när du trycker ut dina ändringar till
@@ -167,11 +170,11 @@
 						<!-- TODO : (show tweets somehow) -->
 
 						<div class="tweets">
-							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
-							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif">
-							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif">
-							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif">
-							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif">
+							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif" />
+							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif" />
+							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif" />
+							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif" />
+							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif" />
 						</div>
 					</div>
 	    </div>
@@ -203,7 +206,7 @@
               eller ett flygplan är väldigt produktivt.
 						</div>
 						
-						<center><img width="500px" src="images/local-remote.png"></center>
+						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
               Även i Mercurial så kommunicerar vanliga kommandon som 
@@ -264,27 +267,27 @@
               provade också med Subversion, och tro mig: Det är långsammast
               &ndash; ta Bazaars nummer och lägg till nätverksfördröjningar.
 						</div>
-						
-						<table>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add">
+            <table>  
+						<tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" alt="init benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" alt="add benchmarks" />
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" alt="status benchmarks" />
 						
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" alt="diff benchmarks" />
 						</td><td rowspan="2">
-							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching">
+							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" alt="branching benchmarks" />
 						</td></tr>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag">
+            <tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" alt="tag benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" alt="log benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (St)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(St)" alt="stora incheckningar">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Li)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(Li)" alt="små incheckningar">
 						</td></tr>
 						</table>
 						
@@ -410,7 +413,7 @@
 					<div class="contents">
 						<div class="text">
 							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout &mdash; in some cases
+							(in general) barely be larger than an SVN checkout&mdash;in some cases
 							actually smaller (apparently a lot can go in those .svn dirs).
 						</div>
 					
@@ -426,7 +429,6 @@
 								<th>Git</th>
 								<th>Hg</th>
 								<th>Bzr</th>
-								<th>Bzr*</th>
 								<th>SVN</th>
 							</tr>
 							<tr>
@@ -434,7 +436,6 @@
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
-								<td>89M</td>
 								<td></td>
 							</tr>
 							<tr>
@@ -442,16 +443,9 @@
 								<td class="compare">43M</td>
 								<td>53M</td>
 								<td>64M</td>
-								<td>108M</td>
 								<td class="compare">61M</td>
 							</tr>
 						</table>
-						
-						<div class="text"><small>
-							* the second Bzr number is after I ran 'bzr pack', which I thought
-							would make it smaller, but ended up making it much, much larger for
-							some reason. 
-						</small></div>
 						
 					</div>
 	    </div>
@@ -480,7 +474,7 @@
 							all the modified files in your working directory, or having to list
 							them on the command line during the commit
 						</div>
-						<center><img src="images/index1.png"></center>
+						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
 						  This also allows you to stage only portions of a modified file.  Gone are
@@ -493,11 +487,11 @@
 
 						<div class="text">
 							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control &mdash; just slap a '-a' to your
+							if you don't want that kind of control&mdash;just slap a '-a' to your
 							commit command in order to add all changes to all files to the staging area.
 						</div>
 						
-						<center><img src="images/index2.png"></center>
+						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
 					</div>
 	    </div>
 
@@ -533,8 +527,8 @@
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone">
-							</td><td width="80%">
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
+							</td><td style="width: 80%">
 								<table>
 									<tr>
 										<th>Git</th>
@@ -589,20 +583,20 @@
 						the same server works just fine.
 					</div>
 					
-					<center><img src="images/workflow-a.png"></center><br/>
+					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
 					<h3>Integration Manager Workflow</h3>
 
 					<div class="text">
 						Another common Git workflow is where there is an integration 
-						manager &mdash; a single person who commits to the 'blessed' repository,
+						manager&mdash;a single person who commits to the 'blessed' repository,
 						and then a number of developers who clone from that repository, 
 						push to their own independent repositories and ask the integrator
 						to pull in their changes.  This is the type of development model 
 						you often see with open source or GitHub repositories.
 					</div>
 
-					<center><img src="images/workflow-b.png"></center><br/>
+					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
 					<h3>Dictator and Lieutenants Workflow</h3>
 
@@ -616,7 +610,7 @@
 						again.
 					</div>
 
-					<center><img src="images/workflow-c.png"></center><br/>
+					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
 						Again, Git is entirely flexible about this, so you can mix and 
@@ -630,7 +624,6 @@
 	    <div class="span-24 section">
 				<div class="args">
 					<span class="lang hg">hg</span>
-					<span class="lang bzr">bzr</span>
 					<span class="lang svn">svn</span>
 					<span class="lang perforce">perforce</span>
 				</div>
@@ -641,13 +634,13 @@
 				
 				<div class="contents">
 
-          <img style="float:right; padding:10px" src="images/octocat.png">
+          <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
 						I <em>may</em> be biased here, given that I work for 
 						<a href="http://github.com">GitHub</a>, 
 						but I add this section anyway because so many people say that
-						GitHub itself was specifically why they choose Git.
+						GitHub itself was specifically why they chose Git.
 					</div>
 
 					<div class="text">					
@@ -671,10 +664,22 @@
 					<div class="text">					
             This type of community is simply not available with any of the other SCMs.
           </div>
+
+					<div class="note">					
+            And no, BitBucket doesn't count just because they ripped off GitHub screen for screen.
+            When they are 30 times bigger and I hear that anyone choose Mercurial over something 
+            else because of the community on BitBucket, then I'll reconsider.
+            <br/>
+            <br/>
+            Launchpad for Bazaar is closer, but they're still a fraction of the size, nor have I
+            heard of anyone leaning towards Bzr because of the incredible Launchpad community
+            they want to take part in.  However, as they are more legitimate, I've removed the
+            'bzr' flag from this argument.
+          </div>
 					
 					<div class="tweets">
-						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
-						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
+						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif" />
+						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif" />
 					</div>
 				</div>
 	    </div>
@@ -701,7 +706,7 @@
         
 				<div class="contents">
 					<div class="text">										
-						This did not used to be true &mdash; early in Git's life, it was not really 
+						This did not used to be true&mdash;early in Git's life, it was not really 
 						an SCM so much as a bunch of tools that let you do versioned filesystem 
 						work in a distributed manner.  However, today, the command set and 
 						learning curve of Git are pretty similar to any other SCM, and even 
@@ -773,7 +778,7 @@ show       Show various types of objects
 					path, which was very confusing to people.  Although Git still recognizes
 					all of those commands, the only command in the path is now 'git'.
 					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system &mdash; there is very little difference from 
+					command set and help system&mdash;there is very little difference from 
 					a beginning UI perspective today.
 				</div>
 				
@@ -793,26 +798,77 @@ show       Show various types of objects
 			* large files (svn)
 		-->
 
-		<br/>
-
     <div class="span-24">					
-				<div class="expand_collapse_links" style="display: none;">
+				<div class="expand_collapse_links">
 				  <a href="#" class="expand_all">Expandera alla</a> |
 				  <a href="#" class="collapse_all">Kontrahera alla</a>
 				</div>
     </div>
     
-    <br />
-		
     <div class="span-24 footer">
 			Denna webbplats är gjord och drivs av <a href="http://github.com/schacon">Scott Chacon</a>, en <a href="http://github.com">GitHubbare</a>.<br/>
 			Om du är oenig om något på denna webbplats och har goda skäl, vänligen <a href="mailto:schacon@gmail.com">maila mig</a> (på engelska)
 			så det kan åtgärdas.<br/>
-			Webbplatsens källkod finns <a href="http://github.com/schacon/whygitisbetter/tree/sv">på GitHub</a> - skicka gärna patchar om du vill förbättra den.<br/>
-			Översatt till svenska av <a href="http://github.com/Mange">Mange</a> och <a href="http://github.com/henrik">Henrik Nyh</a>.
+			Webbplatsens källkod finns <a href="http://github.com/schacon/whygitisbetter/tree/sv">på GitHub</a> &mdash; skicka gärna patchar om du vill förbättra den.<br/>
+			Översatt till svenska av <a href="http://github.com/Mange">Magnus Bergmark</a> och <a href="http://github.com/henrik">Henrik Nyh</a>.
 		</div>
 
+    <div class="span-24 footer-lang">
+      Also in : 
+      <a href="http://de.whygitisbetterthanx.com">German</a>, 
+      <a href="http://es.whygitisbetterthanx.com">Spanish</a>, 
+      <a href="http://fr.whygitisbetterthanx.com">French</a>, 
+      <a href="http://it.whygitisbetterthanx.com">Italian</a>, 
+      <a href="http://lol.whygitisbetterthanx.com">Lolcat</a>, 
+      <a href="http://nl.whygitisbetterthanx.com">Dutch</a>, 
+      <a href="http://no.whygitisbetterthanx.com">Norwegian</a>, 
+      <a href="http://pt.whygitisbetterthanx.com">Portuguese</a>, 
+      <a href="http://sv.whygitisbetterthanx.com">Swedish</a>,
+      <a href="http://zh-cn.whygitisbetterthanx.com">Simplified</a> and
+      <a href="http://zh-tw.whygitisbetterthanx.com">Traditional Chinese</a>
+    </div>
+
+    <div class="span-24 footer-badges">
+      <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a>
+    </div>
 	</div>
+
+  <script type="text/javascript">
+    $(function() {
+      $('.section .contents').hide()
+      $('.contents .tweets').hide()
+
+      $('.expand_collapse_links').show()
+      $('.expand_collapse_links .expand_all').click(function() {
+        $('.section .contents').show()
+      })
+      $('.expand_collapse_links .collapse_all').click(function() {
+        $('.section .contents').hide()
+      })
+
+      $('.section h2').click(function() {
+        var hidden = $(this).next().is(':hidden')
+        $(this).next().slideToggle()
+        return hidden
+      })
+
+      $('#menu span').css('cursor', 'pointer').click(function() {
+        $('.section .contents').hide()
+        showSectionsForSCM(this.innerHTML)
+        document.location.hash = this.innerHTML
+      }) 
+
+      if (document.location.hash) {
+        var anchor = document.location.hash.substring(1)
+        $('.section h2 a[name=' + anchor + ']').parent('h2').click()
+        showSectionsForSCM(anchor)
+      }
+
+      function showSectionsForSCM(scm) {
+        $('.section .' + scm).parents('.section').find('.contents').show()
+      }
+    })
+  </script>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -826,4 +882,3 @@ pageTracker._trackPageview();
 
 </body>
 </html>
-
