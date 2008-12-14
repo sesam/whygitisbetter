@@ -459,39 +459,40 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">Förberedelseområdet (Staging)</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							Olikt de andra systemen så har Git det som kallas för "Förberedelseområdet"
+							("staging area"), eller "Registret" ("index"). Detta är ett mellansteg för
+							dina ändringar så du kan ordna till dem så att de ser ut som du vill innan 
+							de checkas in.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							Det häftiga med förberedelseområdet, och det som separerar Git från 
+							de andra verktygen, är att du enkelt kan förbereda några av dina filer
+							när du är klar med dem och checka in dem utan alla andra filer du ändrat 
+							i din arbetskatalog, eller behöva lista dina ändrade filer på 
+							kommandoraden då du checkar in dem.
 						</div>
-						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
+						<div class="center"><img src="images/index1.png" alt="lägg till, checka in diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+						  Allt detta betyder också att du kan förbereda delar av en modifierad fil.
+							Borta är dagarna där det är ett problem med att du gjort två orelaterade 
+							ändringar i samma fil utan att checka in den första innan du började på 
+							den andra. Med Git kan du bara förbereda ena ändringen, checka in den och 
+							sedan förbereda den andra ändringen. Detta skalar till hur många olika
+							ändringar du behöver!
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control&mdash;just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							Självklart är det enkelt att ignorera denna funktionalitet om du inte vill
+							ha sådan kontroll &mdash; bara släng på '-a' till ditt incheckningskommando
+							så kommer Git att förbereda alla ändrade filer och sedan checka in dem.
 						</div>
 						
-						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
+						<div class="center"><img src="images/index2.png" alt="bara incheckning diagram" /></div>
 					</div>
 	    </div>
 
