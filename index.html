@@ -503,32 +503,32 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">Distribuerad</a>
 	        </h2>
 
 					<div class="contents">
 
 					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
+              En av de häftigaste finesserna med alla de distribuerade versionshanterarna, Git
+							inkluderad, är att de är distribuerade. Det betyder att istället för att göra en
+							utcheckning av ett arkiv så klonar du det.
             </div>
             <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
+							En positiv konsekvens av detta är att även om ni arbetar från ett centraliserat
+							flöde så kommer alla utvecklare att ha en så gott som full backup av huvudservern
+							utifall servern råkar ut för ett fel eller än korruption. Det finns alltid redundans
+							så länge det inte bara finns en utvecklare på en dator.
             </div>
 
             <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
+							Allt detta saktar inte ned saker och ting mycket heller. I snitt var en utcheckning
+							i SVN endast marginellt snabbare än någon annan av alla distribuerade versionshanterarna.
+							Bland alla DSCM:er som jag testade var Git det snabbaste verktygen.
 					  </div>
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="cloning benchmarks" />
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="kloningsutvärdering" />
 							</td><td style="width: 80%">
 								<table>
 									<tr>
