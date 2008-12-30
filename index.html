@@ -562,60 +562,60 @@
 				</div>
 		
        	<h2>
-        <a name="any-workflow" href="#any-workflow">Any Workflow</a>
+        <a name="any-workflow" href="#any-workflow">Valfritt arbetsflöde</a>
        	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						En av de fantastiska sakerna med Git är att eftersom det är distribuerat
+						och har ett så överlägset bra greningssystem så kan man använda Git med
+						i stort sett vilket arbetsflöde man vill utan problem.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Subversion-liknande flöde</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						Ett väldigt vanligt flöde för Git speciellt bland de som konverterat från
+						ett centraliserat SCM, är ett centraliserat arbetsflöde. Git tillåter inte
+						att du trycker upp ändringar om någon annan gjort så sen efter du uppdaterade
+						senast, så en modell där alla trycker upp ändringar till ett och samma ställe
+						fungerar utmärkt.
 					</div>
 					
-					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
+					<div class="center"><img src="images/workflow-a.png" alt="graf över subversion-liknande flöde" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Flöde med Integrationsledare</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager&mdash;a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						Ett annat flöde som är vanligt med Git är det med en integrationsledare
+						&mdash; en person som checkar in ändringar i det "välsignade" arkivet, och 
+						sedan flera utvecklare som clonar det arkivet och arbetar på egna versioner
+						av det, för att sedan be ledaren att hämta in ändringar från dessa. Detta
+						flöde ser man oftst hos fri och öppen mjukvara och hos GitHub.
 					</div>
 
-					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
+					<div class="center"><img src="images/workflow-b.png" alt="graf över integrationsledareflödet" /></div><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Diktator och Löjtnanter</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						the push to the 'blessed' repository that everyone then clones from
-						again.
+						För mer massiva projekt kan man arbeta efter samma flöde som används av Linux-
+						kerneln, där ett flertal personer (de så kallade "Löjtnanterna") är ansvariga 
+						för egna specifika delar av projektet och sedan tar in alla ändringar som rör
+						den del som de ansvarar över. Sedan kan en annan ledare ("Diktatorn") ta de 
+						ändringar som dennes löjtnanter godkänt och sammanfläta i det "välsignade"
+						arkivet. Alla övriga utvecklare klonar det väsignade arkivet när de ska arbeta
+						på något.
 					</div>
 
-					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
+					<div class="center"><img src="images/workflow-c.png" alt="graf över diktator och löjtnanter-flödet" /></div><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+						Git är väldigt flexibelt när det kommer till detta, så du kan blanda och skapa
+						dina egna arbetsflöden. Det är inget specifikt inom Git som avgör hur du skall
+						arbeta med din kod.
           </div>
 					
 				</div>
