@@ -79,8 +79,9 @@
 						anklagelser om att vara trendslavar och blinda fanatiker.
 
 						Här följer därför skälen till att folk byter till Git
-						från X, och varför du också borde det. Klicka på ett
-						argument för att visa det.
+						från X, och varför du också borde det. Klicka på en
+						underrubrik, eller på ett en av de färgade etiketterna,
+						för att välja vad som visas eller döljs.
 					</div>
 					
 					<div class="expand_collapse_links">
@@ -841,7 +842,7 @@ show       Show various types of objects
         document.location.hash = this.innerHTML
       }) 
 
-      $('#args div').css('cursor', 'pointer').click(function() {
+      $('.args span').css('cursor', 'pointer').click(function() {
         $('.section .contents').hide()
         showSectionsForSCM(this.innerHTML)
         document.location.hash = this.innerHTML
