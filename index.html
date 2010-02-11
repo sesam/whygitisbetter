@@ -85,8 +85,8 @@
 					</div>
 					
 					<div class="expand_collapse_links">
-					  <a href="#" class="expand_all">Expandera alla</a> |
-					  <a href="#" class="collapse_all">Kontrahera alla</a>
+					  <a href="#" class="expand_all">Visa alla</a> |
+					  <a href="#" class="collapse_all">Dölj alla</a>
 					</div>
 	    </div>
 
@@ -136,7 +136,7 @@
 
 								<li>
 									skapa en ny gren för varje ny funktionalitet du arbetar på
-									så du kan sömlöst hoppa mellan dem, och sedan ta bort grenar
+									så du kan växla fritt mellan dem, och sedan ta bort grenar
 									som redan slagits ihop med din huvudgren.
 								</li>
 								<li>
@@ -153,18 +153,17 @@
 						<div class="text">
 						  Viktigt att förstå är att när du trycker ut dina ändringar till
 						  ett externt arkiv så måste du <em>inte</em> också trycka ut alla
-						  dina grenar. Du kan bara dela med dig av en gren, inte alla.
+						  dina grenar. Du kan välja vilka grenar du vill dela med dig av.
 						  Detta brukar ge många möjlighet att experimentera med saker utan
 						  att direkt behöva oroa sig för hur och när de ska dela med sig av
 						  experimentet till andra.
 						</div>
 						
 						<div class="text">
-						  Du <em>kan</em> komma på sätt att göra detta med några av de 
-						  andra systemen, men arbetet som skulle vara associerat med dem
-						  är mycket svårare och kan gå fel lättare. Git gör denna process
-						  otroligt enkel och det förändrar hur de flesta utvecklare arbetar
-						  när de lärt sig detta.
+						  Du <em>kan</em> komma på sätt att göra detta även med några av de andra
+						  systemen, men med följden att du får mer och riskablare extrajobb.
+						  Git gör denna process otroligt enkel och det förbättrar arbetsprocessen
+						  för de flesta utvecklare när de tagit till sig detta.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -200,7 +199,7 @@
 						<div class="text">
 						  Detta gör inte bara det mesta operationer snabbare än vad du
 						  kanske förväntar dig, utan gör också att du kan arbeta med saker
-						  utan en uppkoppling. Det kanske inte låter som en stor sak,
+						  utan en uppkoppling. Det kanske inte låter så viktigt,
 						  men jag blir alltid förundrad över hur ofta jag faktiskt jobbar
 						  frånkopplat. Att kunna förgrena, slå ihop grenar, checka in 
 						  ändringar och se historik samtidigt som du sitter i ett tåg
@@ -242,30 +241,30 @@
 						<div class="text">
 						  Git är snabbt. Alla &mdash; till och med de mest inbitna 
 						  fansen av de andra systemen &mdash; brukar ge Git denna 
-						  titel. Med Git sker alla operationer lokalt, vilket ger 
-						  en klart snabbare körning än SVN och Perforce som båda 
-						  kräver en anslutning till en server för många kommandon.
+						  titel. Med Git sker alla operationer lokalt, vilket gör 
+						  Git klart snabbare än SVN och Perforce som båda
+						  ansluter till en server för många kommandon.
 
-						  Men även om man jämför med de andra distribuerade SCM:arna så
-						  är Git ganska snabbt.
+						  Men även jämfört med de andra distribuerade SCM:arna
+						  är Git snabbt.
 						</div>
 					
 						<div class="text">
-						  Ett skäl till detta är antagligen eftersom Git byggdes för
-						  arbete på Linuxkärnan, vilket innebär att det fanns behov
-						  av att det skulle kunna hantera stora arkiv effektivt redan
-						  från första början. Dessutom är Git skrivet i C, vilket 
-						  minskar på allt extra resursanvändande som är associerat med 
-						  att ha en applikation skriven i ett mer högnivåspråk. Ett till
-						  skäl till att Git är snabbt är att utvecklarna haft detta som
-						  ett mål med applikationen och därför utvecklat Git för det.
+						  En förklaring till detta är antagligen att Git skapades just för
+						  att arbeta med den gigantiska källkoden till Linuxkärnan,
+						  vilket innebär att kravet att effektivt kunna hantera stora arkiv var
+						  med från första början. Dessutom är Git skrivet i C, vilket undviker
+						  fördröjningar jämfört med andra verktyg som byggts med
+						  vissa högnivåspråk. En ytterligare orsak till att git är snabbt är
+						  att dess huvudsakliga utvecklare haft snabbhet som en uttalad målsättning.
 						</div>
 
 						<div class="text">
-						  Följande är ett antal mätningar jag gjorde där jag mätte 
-						  hastigheten på ett antal operationer i kopior av Django-
-						  arkivet i olika SCM:er, nämligen Git, Mercurial och Bazaar. Jag
-						  provade också med Subversion, och tro mig: Det är långsammast
+						  Nedan följer ett antal hastighetsmätningar gjorda på kopior av Djangos
+						  källkodsarkiv.
+						  Hastigheten på ett antal operationer mättes för tre olika SCM:er,
+						  nämligen Git, Mercurial och Bazaar.
+						  Jag provade också med Subversion och tro mig; det är långsammast
 						  &ndash; ta Bazaars nummer och lägg till nätverksfördröjningar.
 						</div>
 
@@ -294,10 +293,10 @@
 						
 						<div class="text">
 						  Slutresultatet var att för allt utom att lägga till nya filer så
-						  var Git snabbast. (Även riktigt stora incheckningar, som Hg var
-						  lika snabb på, men den incheckning som jag provade var så stor att
-						  du antagligen aldrig kommer att göra en sådan själv &ndash;
-						  vanliga incheckningar är mycket snabbare än så i Git)
+						  var Git snabbast. Detta gäller även riktigt stora incheckningar, där Hg var
+						  jämlik. Den incheckning som jag mätte var så stor att
+						  du sällan eller aldrig kommer att göra en sådan själv &ndash;
+						  vanliga incheckningar är mycket snabbare i Git.
 						</div>
 						
 						<table>
@@ -377,18 +376,18 @@
 
 						<div class="text">
 						  Det bör noteras att de höga siffrorna för att lägga till 
-						  filer i arkivet trots allt var mycket stora listor med filer
-						  &ndash; över 2&nbsp;000 av dem. För majoriteten av allt 
-						  användande så kommer alla "add" operationer köras på mycket
-						  mindre listor än detta, och då tar hela operationen hundradelar
-						  av en sekund i alla dessa system. Alla andra testade operationer 
-						  här är mer representativa för vad dagligt användande går ut på.
+						  filer i arkivet trots allt var mycket stora mängder filer
+						  &ndash; över 2&nbsp;000 stycken. För typiskt daglig användning
+						  kommer alla tillägg (add-operationer) att gälla mindre mängder filer
+						  så att tilläggningen tar en bråkdels sekund i alla de ovan testade.
+						  Alla andra operationer (utom möjligen incheckningen) visar tider som
+						  är representativa för typisk daglig användning.
 						</div>
 					
 					
 					<div class="text">
-						Dessa nummer är inte svåra att återskapa, bara klona Django-arkiven
-						genom de olika systemen och prova samma kommandon i dem alla.
+						Mina mätningar är inte svåra att återskapa; klona bara Django-arkiven
+						och kör sedan samma kommandona på dem alla.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
@@ -413,17 +412,14 @@
 	
 					<div class="contents">
 						<div class="text">
-							Git är väldigt bra på att begränsa diskanvändande. Generellt så kommer hela
-							ditt Git-arkiv endast vara en bråkdel större än en enkel arbetskopia från
-							SVN &mdash; och i vissa fall till och med <em>mindre</em> (det kan tydligen
-							finnas mycket i alla dessa .svn-mappar).
-						</div>
-					
-						<div class="text">
 							Följande nummer är tagna från kloner av Django-projektets alla halvofficiella 
 							Git-arkiv vid samma tidpunkt i historiken.
+
+						    Git är jättebra på att spara diskutrymme. Din Gitmapp kommer (generellt)
+						    nätt och jämt vara större än en SVN-utcheckning &mdash; till och med mindre i vissa
+						    fall (tydligen kan massor av saker hamna i .svn-mapparna).
 						</div>
-					
+
 						<table>
 							<tr>
 								<th></th>
@@ -433,14 +429,14 @@
 								<th>SVN</th>
 							</tr>
 							<tr>
-								<td>Enbart arkivet</td>
+								<td>Enbart projektbasen</td>
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Hela filträdet</td>
+								<td>Hela mappen</td>
 								<td class="compare">43M</td>
 								<td>53M</td>
 								<td>64M</td>
@@ -448,6 +444,12 @@
 							</tr>
 						</table>
 						
+						<div class="text"><small>
+							* den andra Bzr-mätningen är tagen efter att jag hade kört 'bzr pack',
+							vilket jag trodde skulle göra projektbasen mindre, men resulterade i att den blev
+							väldigt mycket större av någon anledning.
+						</small></div>
+
 					</div>
 	    </div>
 
@@ -460,37 +462,37 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">Förberedelseområdet (Staging)</a>
+          <a name="the-staging-area" href="#the-staging-area">Index</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Olikt de andra systemen så har Git vad som kallas för "Förberedelseområdet"
-							("staging area"), eller "Registret" ("index"). Detta är ett mellansteg för
-							dina ändringar så du kan ordna till dem så att de ser ut som du vill innan 
+						    Till skillnad från andra system så har Git vad som kallas för "index"
+						    eller "förberedelseområde". Det är en mellanliggande plats för dina
+							ändringar där du kan ordna till dem så att de ser ut som du vill innan 
 							de checkas in.
 						</div>
 						<div class="text">
-							Det häftiga med förberedelseområdet, och det som separerar Git från 
-							de andra verktygen, är att du enkelt kan förbereda några av dina filer
-							när du är klar med dem och checka in dem utan alla andra filer du ändrat 
-							i din arbetskatalog, eller behöva lista dina ändrade filer på 
-							kommandoraden då du checkar in dem.
+							Det häftiga med förberedelseområdet är att du kan lägga till ändringar
+							allt eftersom ändringar blir färdiga för att bygga upp din incheckning
+							i steg. Vid incheckningen kommer de ändringar med som du valt, istället
+							för att på gammalt sätt välja ut kompletta filer att checka in.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="lägg till, checka in diagram" /></div>
-						
+
 						<div class="text">
-							Allt detta betyder också att du kan förbereda delar av en modifierad fil.
-							Borta är dagarna där det är ett problem med att du gjort två orelaterade 
-							ändringar i samma fil utan att checka in den första innan du började på 
-							den andra. Med Git kan du bara förbereda ena ändringen, checka in den och 
-							sedan förbereda den andra ändringen. Detta skalar till hur många olika
-							ändringar du behöver!
+							Detta betyder även att du har möjlighet att välja exakt vilka 
+							ändringar i en fil som ska checkas in. Aldrig mer dilemmat med en fil 
+							där du gjort två orelaterade ändringar och glömt att checka in dem 
+							separat. Med Git kan du placera bara den ena ändringen på 
+							förberedelseområdet och checka in, för att sedan förbereda och 
+							checka in den andra ändringen. Du kan fördela dina ändringar
+							till precis så många incheckningar som du vill!
 						</div>
 
 						<div class="text">
-							Självklart är det enkelt att ignorera denna funktionalitet om du inte vill
-							ha sådan kontroll &mdash; bara släng på '-a' till ditt incheckningskommando
-							så kommer Git att förbereda alla ändrade filer och sedan checka in dem.
+						    Självklart så gör Git det väldigt enkelt att ignorera den här funktionen
+						    om du inte vill ha den typen av kontroll &mdash; släng bara ett '-a' på
+						    ditt incheckningskommando för att lägga till alla filerna i arbetsytan.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="arbetsflödesdiagram för enbart incheckning" /></div>
@@ -785,8 +787,8 @@ show       Show various types of objects
 
     <div class="span-24">
 				<div class="expand_collapse_links">
-				  <a href="#" class="expand_all">Expandera alla</a> |
-				  <a href="#" class="collapse_all">Kontrahera alla</a>
+				  <a href="#" class="expand_all">Visa alla</a> |
+				  <a href="#" class="collapse_all">Dölj alla</a>
 				</div>
     </div>
     
