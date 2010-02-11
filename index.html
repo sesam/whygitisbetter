@@ -7,26 +7,27 @@
 
 	<title>Varför Git är bättre än X</title>
 	
-	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">    
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print" />
 	<!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-  <script src="javascripts/main.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
 	
 	<style type="text/css">
 		html { overflow-y: scroll; }
+		body { margin-top: 1.5em; }
 		.header h1 { font-size: 3.5em; color: #666; }
-		.expand_collapse_links { text-align: center; }
+		.expand_collapse_links { text-align: center; margin-bottom: 1.5em; display: none; }
 		.expand_collapse_links a { color: #555; }
 		img { margin-bottom: 10px; }
+		.center { text-align: center; }
 		.text, p { font-size: 1.2em; margin-bottom: 10px; text-align: justify;}
 		.intro { color: #444; }
 		ul li { margin-top: 10px; }
 		.section h2 { padding-left: 5px; background-color: #eee; cursor: pointer;}
     .section h2 a { color: #333; text-decoration:none; display: block; }
-		.section { margin-bottom: 20px; }
-		.contents { padding: 0 10px; }
+		.section { padding-bottom: 2px; }
+		.contents { padding: 0 10px; width: 610px; }
 		.args { float:right; }
 		.lang { padding: 3px; font-weight: bold;}
 		.section .lang { font-size: 0.8em; padding: 2px; font-weight: normal;}
@@ -34,23 +35,27 @@
 		.perforce { color: hsl(0,57%,24%); background: hsl(0,57%,83%) }
 		.bzr { color: hsl(60,57%,24%); background: hsl(60,57%,83%) }
 		.hg { color: hsl(190,57%,24%); background: hsl(190,57%,83%) }
+		.nowrap { white-space: nowrap; }
 		.sweet { color: #363; background: #beb; }
 		.compare { color: #663; background: #eeb; }
 		.help pre { font-size: 12px; }
 		.help td { vertical-align: top; }
 		code { font-size: 90%; }
 		.footer { text-align: center; color: #663; background-color: #eea; padding: 10px;}
-		.footer a { color: #440; }
+		.footer a { color: #440; } 
+		.footer-lang { text-align: center; color: #443; background-color: #dda; padding: 5px; font-size: 90%; }
+		.footer-lang a { color: #330; } 
+    .footer-badges { text-align: center; }
+    .footer-badges a { color: #777; }
+		.lang a {color: inherit; text-decoration: none;}
+    .note { text-decoration: italic; color: #666; padding: 1em; }
 	</style>
 	
 </head>
 
 <body>
-
 	<div class="container">
 
-			<br/>
-			
 	    <div class="span-24 header">
 				<table width="100%">
 					<tr><td>
@@ -62,7 +67,7 @@
 							<span class="lang svn">svn</span>
 							<span class="lang perforce">perforce</span>
 						</div>
-						<img style="float: right" alt="Där 'X' är en av" src="images/wherex.gif">
+						<img style="float: right" alt="Där 'X' är en av" src="images/wherex.gif" />
 					</td></tr>
 					</table>
 	    </div>
@@ -78,13 +83,11 @@
             argument för att visa det.
 					</div>
 					
-					<div class="expand_collapse_links" style="display: none;">
+					<div class="expand_collapse_links">
 					  <a href="#" class="expand_all">Expandera alla</a> |
 					  <a href="#" class="collapse_all">Kontrahera alla</a>
 					</div>
 	    </div>
-
-			<br/>
 
 	    <div class="span-24 section">
 					<div class="args">
@@ -144,7 +147,7 @@
 							</ul>
 						</div>
 						
-						<img src="images/branches.png">
+						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
               Viktigt att förstå är att när du trycker ut dina ändringar till
@@ -167,11 +170,11 @@
 						<!-- TODO : (show tweets somehow) -->
 
 						<div class="tweets">
-							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif">
-							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif">
-							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif">
-							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif">
-							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif">
+							<img alt='jamis twitter' width="300" src="http://twictur.es/i/1022811017.gif" />
+							<img alt='trevorturk twitter' width="300" src="http://twictur.es/i/1022886570.gif" />
+							<img alt='thillerson twitter' width="300" src="http://twictur.es/i/1022842917.gif" />
+							<img alt='boblmartens twitter' width="300" src="http://twictur.es/i/1022818467.gif" />
+							<img alt='mathie twitter' width="300" src="http://twictur.es/i/1022816942.gif" />
 						</div>
 					</div>
 	    </div>
@@ -203,7 +206,7 @@
               eller ett flygplan är väldigt produktivt.
 						</div>
 						
-						<center><img width="500px" src="images/local-remote.png"></center>
+						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
               Även i Mercurial så kommunicerar vanliga kommandon som 
@@ -264,27 +267,27 @@
               provade också med Subversion, och tro mig: Det är långsammast
               &ndash; ta Bazaars nummer och lägg till nätverksfördröjningar.
 						</div>
-						
-						<table>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add">
+            <table>  
+						<tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:2,5,60&amp;chds=0,60&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Init" alt="init benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:85,3,23&amp;chds=0,100&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Add" alt="add benchmarks" />
+
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:45,194,1474&amp;chds=0,1474&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Status" alt="status benchmarks" />
 						
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,21,142&amp;chds=0,142&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Diff" alt="diff benchmarks" />
 						</td><td rowspan="2">
-							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching">
+							<img src="http://chart.apis.google.com/chart?cht=bvg&amp;chs=190x275&amp;chd=t:1,123,390|11,946,820&amp;chds=0,1210&amp;chxt=x&amp;chco=4d89f9,c6d9fd&amp;chl=git|hg|bzr&amp;chtt=Branching" alt="branching benchmarks" />
 						</td></tr>
-						<tr><td nowrap>
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag">
+            <tr><td class="nowrap">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:5,120,189&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Tag" alt="tag benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:7,26,90&amp;chds=0,90&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Log" alt="log benchmarks" />
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (St)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:124,125,230&amp;chds=0,230&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(St)" alt="stora incheckningar">
 
-							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit (Li)">
+							<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=100x125&amp;chd=t:8,51,113&amp;chds=0,113&amp;chxt=x&amp;chco=4d89f9&amp;chl=git|hg|bzr&amp;chtt=Commit+(Li)" alt="små incheckningar">
 						</td></tr>
 						</table>
 						
@@ -404,20 +407,20 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-small" href="#git-is-small">Git is Small</a>
+          <a name="git-is-small" href="#git-is-small">Git är litet</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is really good at conserving disk space.  Your Git directory will 
-							(in general) barely be larger than an SVN checkout &mdash; in some cases
-							actually smaller (apparently a lot can go in those .svn dirs).
+							Git är väldigt bra på att begränsa diskanvändande. Generellt så kommer hela
+							ditt Git-arkiv endast vara en bråkdel större än en enkel arbetskopia från
+							SVN &mdash; och i vissa fall till och med <em>mindre</em> (det kan tydligen
+							finnas mycket i alla dessa .svn-mappar).
 						</div>
 					
 						<div class="text">
-							The following numbers were taken from clones of the Django project
-							in each of its semi-official Git mirrors at the same point in 
-							its history.
+							Följande nummer är tagna från kloner av Django-projektets alla halvofficiella 
+							Git-arkiv vid samma tidpunkt i historiken.
 						</div>
 					
 						<table>
@@ -426,32 +429,23 @@
 								<th>Git</th>
 								<th>Hg</th>
 								<th>Bzr</th>
-								<th>Bzr*</th>
 								<th>SVN</th>
 							</tr>
 							<tr>
-								<td>Repo Alone</td>
+								<td>Arkivet självt</td>
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
-								<td>89M</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Entire Directory</td>
+								<td>Hela filträdet</td>
 								<td class="compare">43M</td>
 								<td>53M</td>
 								<td>64M</td>
-								<td>108M</td>
 								<td class="compare">61M</td>
 							</tr>
 						</table>
-						
-						<div class="text"><small>
-							* the second Bzr number is after I ran 'bzr pack', which I thought
-							would make it smaller, but ended up making it much, much larger for
-							some reason. 
-						</small></div>
 						
 					</div>
 	    </div>
@@ -465,39 +459,40 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">Förberedelseområdet (Staging)</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							Olikt de andra systemen så har Git det som kallas för "Förberedelseområdet"
+							("staging area"), eller "Registret" ("index"). Detta är ett mellansteg för
+							dina ändringar så du kan ordna till dem så att de ser ut som du vill innan 
+							de checkas in.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							Det häftiga med förberedelseområdet, och det som separerar Git från 
+							de andra verktygen, är att du enkelt kan förbereda några av dina filer
+							när du är klar med dem och checka in dem utan alla andra filer du ändrat 
+							i din arbetskatalog, eller behöva lista dina ändrade filer på 
+							kommandoraden då du checkar in dem.
 						</div>
-						<center><img src="images/index1.png"></center>
+						<div class="center"><img src="images/index1.png" alt="lägg till, checka in diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+						  Allt detta betyder också att du kan förbereda delar av en modifierad fil.
+							Borta är dagarna där det är ett problem med att du gjort två orelaterade 
+							ändringar i samma fil utan att checka in den första innan du började på 
+							den andra. Med Git kan du bara förbereda ena ändringen, checka in den och 
+							sedan förbereda den andra ändringen. Detta skalar till hur många olika
+							ändringar du behöver!
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control &mdash; just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							Självklart är det enkelt att ignorera denna funktionalitet om du inte vill
+							ha sådan kontroll &mdash; bara släng på '-a' till ditt incheckningskommando
+							så kommer Git att förbereda alla ändrade filer och sedan checka in dem.
 						</div>
 						
-						<center><img src="images/index2.png"></center>
+						<div class="center"><img src="images/index2.png" alt="bara incheckning diagram" /></div>
 					</div>
 	    </div>
 
@@ -508,33 +503,33 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">Distribuerad</a>
 	        </h2>
 
 					<div class="contents">
 
 					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
+              En av de häftigaste finesserna med alla de distribuerade versionshanterarna, Git
+							inkluderad, är att de är distribuerade. Det betyder att istället för att göra en
+							utcheckning av ett arkiv så klonar du det.
             </div>
             <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
+							En positiv konsekvens av detta är att även om ni arbetar från ett centraliserat
+							flöde så kommer alla utvecklare att ha en så gott som full backup av huvudservern
+							utifall servern råkar ut för ett fel eller än korruption. Det finns alltid redundans
+							så länge det inte bara finns en utvecklare på en dator.
             </div>
 
             <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
+							Allt detta saktar inte ned saker och ting mycket heller. I snitt var en utcheckning
+							i SVN endast marginellt snabbare än någon annan av alla distribuerade versionshanterarna.
+							Bland alla DSCM:er som jag testade var Git det snabbaste verktygen.
 					  </div>
 
 						<table>
 							<tr><td>
-								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone">
-							</td><td width="80%">
+								<img src="http://chart.apis.google.com/chart?cht=bvs&amp;chs=200x150&amp;chd=t:120,144,311,64&amp;chds=0,320&amp;chco=4d89f9&amp;chl=git|hg|bzr|svn&amp;chtt=Clone" alt="kloningsutvärdering" />
+							</td><td style="width: 80%">
 								<table>
 									<tr>
 										<th>Git</th>
@@ -567,60 +562,60 @@
 				</div>
 		
        	<h2>
-        <a name="any-workflow" href="#any-workflow">Any Workflow</a>
+        <a name="any-workflow" href="#any-workflow">Valfritt arbetsflöde</a>
        	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						En av de fantastiska sakerna med Git är att eftersom det är distribuerat
+						och har ett så överlägset bra greningssystem så kan man använda Git med
+						i stort sett vilket arbetsflöde man vill utan problem.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
+					<h3>Subversion-liknande flöde</h3>
 					
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						Ett väldigt vanligt flöde för Git speciellt bland de som konverterat från
+						ett centraliserat SCM, är ett centraliserat arbetsflöde. Git tillåter inte
+						att du trycker upp ändringar om någon annan gjort så sen efter du uppdaterade
+						senast, så en modell där alla trycker upp ändringar till ett och samma ställe
+						fungerar utmärkt.
 					</div>
 					
-					<center><img src="images/workflow-a.png"></center><br/>
+					<div class="center"><img src="images/workflow-a.png" alt="graf över subversion-liknande flöde" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Flöde med Integrationsledare</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager &mdash; a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						Ett annat flöde som är vanligt med Git är det med en integrationsledare
+						&mdash; en person som checkar in ändringar i det "välsignade" arkivet, och 
+						sedan flera utvecklare som clonar det arkivet och arbetar på egna versioner
+						av det, för att sedan be ledaren att hämta in ändringar från dessa. Detta
+						flöde ser man oftst hos fri och öppen mjukvara och hos GitHub.
 					</div>
 
-					<center><img src="images/workflow-b.png"></center><br/>
+					<div class="center"><img src="images/workflow-b.png" alt="graf över integrationsledareflödet" /></div><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Diktator och Löjtnanter</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						the push to the 'blessed' repository that everyone then clones from
-						again.
+						För mer massiva projekt kan man arbeta efter samma flöde som används av Linux-
+						kerneln, där ett flertal personer (de så kallade "Löjtnanterna") är ansvariga 
+						för egna specifika delar av projektet och sedan tar in alla ändringar som rör
+						den del som de ansvarar över. Sedan kan en annan ledare ("Diktatorn") ta de 
+						ändringar som dennes löjtnanter godkänt och sammanfläta i det "välsignade"
+						arkivet. Alla övriga utvecklare klonar det väsignade arkivet när de ska arbeta
+						på något.
 					</div>
 
-					<center><img src="images/workflow-c.png"></center><br/>
+					<div class="center"><img src="images/workflow-c.png" alt="graf över diktator och löjtnanter-flödet" /></div><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+						Git är väldigt flexibelt när det kommer till detta, så du kan blanda och skapa
+						dina egna arbetsflöden. Det är inget specifikt inom Git som avgör hur du skall
+						arbeta med din kod.
           </div>
 					
 				</div>
@@ -630,7 +625,6 @@
 	    <div class="span-24 section">
 				<div class="args">
 					<span class="lang hg">hg</span>
-					<span class="lang bzr">bzr</span>
 					<span class="lang svn">svn</span>
 					<span class="lang perforce">perforce</span>
 				</div>
@@ -641,41 +635,36 @@
 				
 				<div class="contents">
 
-          <img style="float:right; padding:10px" src="images/octocat.png">
+          <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
-						I <em>may</em> be biased here, given that I work for 
-						<a href="http://github.com">GitHub</a>, 
-						but I add this section anyway because so many people say that
-						GitHub itself was specifically why they choose Git.
+						Jag <em>kan</em> vara partisk här, eftersom jag är anställd hos 
+						<a href="http://www.github.com">GitHub</a>, men jag la till denna sektion
+						ändå eftersom så många människor säger att GitHub var ett specifikt skäl 
+						till att de började använda Git.
 					</div>
 
-					<div class="text">					
-						GitHub is a reason to use Git for many people because it is more 
-						like a social network for code than a simple hosting site.  People
-						find other developers or projects that are similar to the things
-						they are doing, and can easily fork and contribute, creating a very
-						vibrant community around Git and the projects that people use it
-						for.
+					<div class="text">
+						GitHub är ett skäl till att använda Git för många människor eftersom
+						det är mer som ett socialt nätverk för kod än bara ett webbhotell. Folk
+						hittar projekt och kodbaser som liknar det de själva håller på med och
+						kan enkelt skapa förgreningar av de projekten och bidra med egna ändringar.
+						Detta skapar en stor närskap runt Git och projekten som finns här.
 					</div>
 					
-					<div class="text">					
-						There exist other services, both for Git and for the other SCMs,
-						but few are user-oriented or socially
-						targeted, and none have anywhere near the user-base.  
-						This social aspect of GitHub is killer, and this in combination of the above features
-						make working with Git and GitHub a great combination for rapidly 
-						developing open source projects.
+					<div class="text">
+						Det finns andra tjänster, både för Git och för de andra SCM:er, men få är
+						så användarinriktade med en sådan social fokus, och ingen av dem har ens
+						i närheten så många användare.
+						Den sociala aspekten är störtskön, och kombinationen av de ovan nämnda finesserna
+						gör att utveckling med Git och GitHub är en mycket bra kombination för att snabbt
+						utveckla öppen mjukvara.
 					</div>
 
-					<div class="text">					
-            This type of community is simply not available with any of the other SCMs.
+					<div class="text">
+						Denna typ av community är helt enkelt inte ens tillgänglig med någon annan SCM.
           </div>
-					
-					<div class="tweets">
-						<img alt='puls twitter' width="300" src="http://twictur.es/i/1022858126.gif">
-						<img alt='twitter' width="300" src="http://twictur.es/i/1022857633.gif">
-					</div>
+
 				</div>
 	    </div>
 	
@@ -696,24 +685,24 @@
 				</div>
 				
         <h2>
-        <a name="easy-to-learn" href="#easy-to-learn">Easy to Learn</a>
+        <a name="easy-to-learn" href="#easy-to-learn">Lätt att lära sig</a>
         </h2>
         
 				<div class="contents">
-					<div class="text">										
-						This did not used to be true &mdash; early in Git's life, it was not really 
-						an SCM so much as a bunch of tools that let you do versioned filesystem 
-						work in a distributed manner.  However, today, the command set and 
-						learning curve of Git are pretty similar to any other SCM, and even 
-						better than some.
+					<div class="text">
+						En gång i tiden var detta inte sant &mdash; tidigt i Gits liv var det inte så
+						mycket ett SCM som en bunt verktyg för att göra versionshanterande filsystem
+						som fungerade distribuerat. Idag &ndash; å andra sidan &ndash; har dess 
+						inlärningskurva blivit mer lik den hos andra SCM:er, och t.o.m. bättre än några
+						andra.
 					</div>
 
-					<div class="text">										
-						Since this is difficult to prove objectively without some sort of 
-						study, I'll just show the difference between the default 'help' menu for the
-						Mercurial and Git commands.  I've highlighted the commands that are
-						identical (or nearly) between the two systems.  (In Hg, if you type 'hg help', you 
-						get a list of 40-some commands.)
+					<div class="text">
+						Detta är givetvis mycket svårt att bevisa objektivt utan någon form av studie,
+						så jag kommer bara att visa skillnaden mellan <code>help</code>-kommandot för
+						Git och Mercurial. Jag har markerat de kommandon som är identiska eller mycket 
+						lika mellan de olika systemen. I Mercurial get <code>help</code> en lista på
+						ca. 40 kommandon.
 					</div>
 				
 					<table class="help">
@@ -768,18 +757,18 @@ show       Show various types of objects
 				</td></tr>
 				</table>
 				
-				<div class="text">										
-					Prior to Git 1.6, all of the Git commands used to be in the executable
-					path, which was very confusing to people.  Although Git still recognizes
-					all of those commands, the only command in the path is now 'git'.
-					So, if you look at Mercurial and Git, Git has a nearly identical 
-					command set and help system &mdash; there is very little difference from 
-					a beginning UI perspective today.
+				<div class="text">
+					Före Git 1.6 fanns alla Git-kommandon i systemets kommandosökvägar, vilket
+					var ganska förvirrande för många. Även om Git fortfarande förstår alla 
+					dessa kommandon så är det nu endast <code>git</code> som finns i 
+					kommandosökvägen. Om du ser på Mercurial och Git så har de nästan exakt
+					likadana uppsättningar kommandon och hjälpen är mycket lik &mdash; det är
+					väldigt liten skillnad mellan dem när det gäller användargränssnittet.
 				</div>
 				
-				<div class="text">										
-					These days it's pretty hard to argue that Mercurial or Bazaar is any
-					easier to learn than Git is.
+				<div class="text">
+					Nu för tiden är det svårt att argumentera för att Mercurial eller Bazaar är
+					lättare att lära sig än Git är.
 				</div>
 				
 				</div>
@@ -793,26 +782,76 @@ show       Show various types of objects
 			* large files (svn)
 		-->
 
-		<br/>
-
-    <div class="span-24">					
-				<div class="expand_collapse_links" style="display: none;">
+    <div class="span-24">
+				<div class="expand_collapse_links">
 				  <a href="#" class="expand_all">Expandera alla</a> |
 				  <a href="#" class="collapse_all">Kontrahera alla</a>
 				</div>
     </div>
     
-    <br />
-		
     <div class="span-24 footer">
 			Denna webbplats är gjord och drivs av <a href="http://github.com/schacon">Scott Chacon</a>, en <a href="http://github.com">GitHubbare</a>.<br/>
-			Om du är oenig om något på denna webbplats och har goda skäl, vänligen <a href="mailto:schacon@gmail.com">maila mig</a> (på engelska)
-			så det kan åtgärdas.<br/>
-			Webbplatsens källkod finns <a href="http://github.com/schacon/whygitisbetter/tree/sv">på GitHub</a> - skicka gärna patchar om du vill förbättra den.<br/>
-			Översatt till svenska av <a href="http://github.com/Mange">Mange</a> och <a href="http://github.com/henrik">Henrik Nyh</a>.
+			Om du är oenig om något på denna webbplats och har goda skäl, vänligen <a href="mailto:schacon@gmail.com">maila mig</a> (på engelska) så det kan åtgärdas.<br/>
+			Webbplatsens källkod finns <a href="http://github.com/schacon/whygitisbetter/tree/sv">på GitHub</a> &mdash; skicka gärna patchar om du vill förbättra den.<br/>
+			Översatt till svenska av <a href="http://github.com/Mange">Magnus Bergmark</a> och <a href="http://github.com/henrik">Henrik Nyh</a>.
 		</div>
 
+    <div class="span-24 footer-lang">
+      Finns också på:
+      <a href="http://www.whygitisbetterthanx.com">Engelska</a>,
+      <a href="http://de.whygitisbetterthanx.com">Tyska</a>,
+      <a href="http://es.whygitisbetterthanx.com">Spanska</a>, 
+      <a href="http://fr.whygitisbetterthanx.com">Franska</a>, 
+      <a href="http://it.whygitisbetterthanx.com">Italienska</a>, 
+      <a href="http://lol.whygitisbetterthanx.com">Lolcat</a>, 
+      <a href="http://nl.whygitisbetterthanx.com">Hollänska</a>, 
+      <a href="http://no.whygitisbetterthanx.com">Norska</a>, 
+      <a href="http://pt.whygitisbetterthanx.com">Portugisiska</a>, 
+      <a href="http://zh-cn.whygitisbetterthanx.com">Förenklad</a> och
+      <a href="http://zh-tw.whygitisbetterthanx.com">Traditionell Kinesiska</a>
+    </div>
+
+    <div class="span-24 footer-badges">
+      <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a>
+    </div>
 	</div>
+
+  <script type="text/javascript">
+    $(function() {
+      $('.section .contents').hide()
+      $('.contents .tweets').hide()
+
+      $('.expand_collapse_links').show()
+      $('.expand_collapse_links .expand_all').click(function() {
+        $('.section .contents').show()
+      })
+      $('.expand_collapse_links .collapse_all').click(function() {
+        $('.section .contents').hide()
+      })
+
+      $('.section h2').click(function() {
+        var hidden = $(this).next().is(':hidden')
+        $(this).next().slideToggle()
+        return hidden
+      })
+
+      $('#menu span').css('cursor', 'pointer').click(function() {
+        $('.section .contents').hide()
+        showSectionsForSCM(this.innerHTML)
+        document.location.hash = this.innerHTML
+      }) 
+
+      if (document.location.hash) {
+        var anchor = document.location.hash.substring(1)
+        $('.section h2 a[name=' + anchor + ']').parent('h2').click()
+        showSectionsForSCM(anchor)
+      }
+
+      function showSectionsForSCM(scm) {
+        $('.section .' + scm).parents('.section').find('.contents').show()
+      }
+    })
+  </script>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -826,4 +865,3 @@ pageTracker._trackPageview();
 
 </body>
 </html>
-
