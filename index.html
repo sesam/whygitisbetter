@@ -74,13 +74,13 @@
 
 	    <div class="span-24">
 					<div class="text intro">
-            Denna webbplats är här för att jag på sistone fått 
-            lägga mycket tid på att försvara Git-användare från
-            anklagelser om att vara trendslavar och blinda fanatiker.
+						Denna webbplats är här för att jag på sistone fått 
+						lägga mycket tid på att försvara Git-användare från
+						anklagelser om att vara trendslavar och blinda fanatiker.
 
-            Här följer därför skälen till att folk byter till Git
-            från X, och varför du också borde det. Klicka på ett
-            argument för att visa det.
+						Här följer därför skälen till att folk byter till Git
+						från X, och varför du också borde det. Klicka på ett
+						argument för att visa det.
 					</div>
 					
 					<div class="expand_collapse_links">
@@ -103,67 +103,67 @@
 					<div class="contents">
 						
 						<div class="text">
-              Antagligen är Gits mest intressanta egenskap som skiljer sig
-              från nästan alla versionhanteringssystem (SCM) dess 
-              branchingstöd. Det är helt annorlunda alla andra system som vi
-              jämför med här, där de flesta egentligen hanterar grenar som en
-              kopia av hela arkivet i en annan mapp.
+			              Antagligen är Gits mest övertygande egenskap dess flexibla hantering av grenar,
+			              som skiljer Git från nästan alla andra versionhanteringssystem (SCM).
+			              Grenar i Git är helt annorlunda än i alla andra system som
+			              jämförs här, där de flesta syftar till att grenar ska vara en
+			              kopia av hela arkivet i en egen mapp.
 						</div>
 						
 						<div class="text">
-              Git fungerar inte på detta sätt. Git tillåter dig att ha ett 
-              flertal lokala grenar som kan vara helt oberoende av varandra
-              och att skapa, slå ihop och ta bort dem tar sekunder.
+						  Git fungerar inte på detta sätt. Git tillåter dig att ha ett 
+						  flertal lokala grenar som kan vara helt oberoende av varandra
+						  och att skapa, slå ihop och ta bort dem tar sekunder.
 						</div>
 						
 						
 						<div class="text">
-              Detta betyder att du kan göra saker som att
-              <ul>
-                <li>
-                    skapa en gren för att prova en idé du har, checka in 
-                    ändringar hur mycket du vill, gå tillbaka till där 
-                    du var innan, verkställa en patch, gå tillbaka till ditt 
-                    experiment och till sist slå ihop grenen.
-                </li>
+							Detta betyder att du kan göra saker som att
+							<ul>
+								<li>
+									skapa en gren för att prova en idé du har, checka in 
+									ändringar hur mycket du vill, gå tillbaka till där 
+									du var innan, verkställa en patch, gå tillbaka till ditt 
+									experiment och till sist slå ihop grenen.
+								</li>
 
-                <li>
-                    ha en gren som alltid innehåller det som är 
-                    produktionssatt, en annan där du har det som skall testas
-                    och flera mindre för dagligt arbete.
-                </li>
+								<li>
+									ha en gren som alltid innehåller det som är 
+									produktionssatt, en annan där du har det som skall testas
+									och flera mindre för dagligt arbete.
+								</li>
 
-                <li>
-                    skapa en ny gren för varje ny funktionalitet du arbetar på
-                    så du kan sömlöst hoppa mellan dem, och sedan ta bort grenar
-                    som redan slagits ihop med din huvudgren.
-                </li>
-                <li>
-                    skapa en gren att experimentera i, inse att det inte ledde
-                    till något konkret och sedan ta bort den och överge ditt 
-                    arbete &ndash; utan att någon annan har fått se den, trots
-                    att du kan ha tryckt ut ändringar i andra grenar under tiden.
-                </li>
+								<li>
+									skapa en ny gren för varje ny funktionalitet du arbetar på
+									så du kan sömlöst hoppa mellan dem, och sedan ta bort grenar
+									som redan slagits ihop med din huvudgren.
+								</li>
+								<li>
+									skapa en gren att experimentera i, inse att det inte ledde
+									till något konkret och sedan ta bort den och överge ditt 
+									arbete &ndash; utan att någon annan har fått se den, trots
+									att du kan ha tryckt ut ändringar i andra grenar under tiden.
+								</li>
 							</ul>
 						</div>
 						
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-              Viktigt att förstå är att när du trycker ut dina ändringar till
-              ett externt arkiv så måste du <em>inte</em> också trycka ut alla
-              dina grenar. Du kan bara dela med dig av en gren, inte alla.
-              Detta brukar ge många möjlighet att experimentera med saker utan
-              att direkt behöva oroa sig för hur och när de ska dela med sig av
-              experimentet till andra.
+						  Viktigt att förstå är att när du trycker ut dina ändringar till
+						  ett externt arkiv så måste du <em>inte</em> också trycka ut alla
+						  dina grenar. Du kan bara dela med dig av en gren, inte alla.
+						  Detta brukar ge många möjlighet att experimentera med saker utan
+						  att direkt behöva oroa sig för hur och när de ska dela med sig av
+						  experimentet till andra.
 						</div>
 						
 						<div class="text">
-              Du <em>kan</em> komma på sätt att göra detta med några av de 
-              andra systemen, men arbetet som skulle vara associerat med dem
-              är mycket svårare och kan gå fel lättare. Git gör denna process
-              otroligt enkel och det förändrar hur de flesta utvecklare arbetar
-              när de lärt sig detta.
+						  Du <em>kan</em> komma på sätt att göra detta med några av de 
+						  andra systemen, men arbetet som skulle vara associerat med dem
+						  är mycket svårare och kan gå fel lättare. Git gör denna process
+						  otroligt enkel och det förändrar hur de flesta utvecklare arbetar
+						  när de lärt sig detta.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
@@ -190,37 +190,37 @@
 					<div class="contents">	
 
 						<div class="text">
-              Detta är egentligen ganska sant med alla distribuerade SCM:er, 
-              men enligt mina erfarenheter så är det extra sant med Git.
-              Det är lite utöver "fetch", "pull" och "push" som kommunicerar
-              på något sätt med något annat än din egen hårddisk.
+						  Detta är egentligen ganska sant med alla distribuerade SCM:er, 
+						  men enligt mina erfarenheter så är det extra sant med Git.
+						  Det är lite utöver "fetch", "pull" och "push" som kommunicerar
+						  på något sätt med något annat än din egen hårddisk.
 						</div>
 
 						<div class="text">
-              Detta gör inte bara det mesta operationer snabbare än vad du
-              kanske förväntar dig, utan gör också att du kan arbeta med saker
-              utan en uppkoppling. Det kanske inte låter som en stor sak,
-              men jag blir alltid förundrad över hur ofta jag faktiskt jobbar
-              frånkopplat. Att kunna förgrena, slå ihop grenar, checka in 
-              ändringar och se historik samtidigt som du sitter i ett tåg
-              eller ett flygplan är väldigt produktivt.
+						  Detta gör inte bara det mesta operationer snabbare än vad du
+						  kanske förväntar dig, utan gör också att du kan arbeta med saker
+						  utan en uppkoppling. Det kanske inte låter som en stor sak,
+						  men jag blir alltid förundrad över hur ofta jag faktiskt jobbar
+						  frånkopplat. Att kunna förgrena, slå ihop grenar, checka in 
+						  ändringar och se historik samtidigt som du sitter i ett tåg
+						  eller ett flygplan är väldigt produktivt.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-              Även i Mercurial så kommunicerar vanliga kommandon som 
-              "incoming" och "outgoing" med en server, medan du med Git
-              kan göra en "fetch" och sedan ha all data från servern,
-              vilket ger dig möjligheten att hantera kod som du inte har
-              i dina lokala grenar än, trots att du är frånkopplad.
+						  Även i Mercurial så kommunicerar vanliga kommandon som 
+						  "incoming" och "outgoing" med en server, medan du med Git
+						  kan göra en "fetch" och sedan ha all data från servern,
+						  vilket ger dig möjligheten att hantera kod som du inte har
+						  i dina lokala grenar än, trots att du är frånkopplad.
 						</div>
 												
 						<div class="text">
-              Detta betyder således att det är mycket enkelt att ha kopior
-              av inte bara dina grenar, utan också grenarna som tillhör de
-              andra som jobbar i samma arkiv utan att det stökar till dina
-              egna ändringar och grenar.
+						  Detta betyder således att det är mycket enkelt att ha kopior
+						  av inte bara dina grenar, utan också grenarna som tillhör de
+						  andra som jobbar i samma arkiv utan att det stökar till dina
+						  egna ändringar och grenar.
 						</div>
 						
 					</div>
@@ -239,33 +239,33 @@
 	
 					<div class="contents">
 						<div class="text">
-              Git är snabbt. Alla &mdash; till och med de mest inbitna 
-              fansen av de andra systemen &mdash; brukar ge Git denna 
-              titel. Med Git sker alla operationer lokalt, vilket ger 
-              en klart snabbare körning än SVN och Perforce som båda 
-              kräver en anslutning till en server för många kommandon.
+						  Git är snabbt. Alla &mdash; till och med de mest inbitna 
+						  fansen av de andra systemen &mdash; brukar ge Git denna 
+						  titel. Med Git sker alla operationer lokalt, vilket ger 
+						  en klart snabbare körning än SVN och Perforce som båda 
+						  kräver en anslutning till en server för många kommandon.
 
-              Men även om man jämför med de andra distribuerade SCM:arna så
-              är Git ganska snabbt.
+						  Men även om man jämför med de andra distribuerade SCM:arna så
+						  är Git ganska snabbt.
 						</div>
 					
 						<div class="text">
-              Ett skäl till detta är antagligen eftersom Git byggdes för
-              arbete på Linuxkärnan, vilket innebär att det fanns behov
-              av att det skulle kunna hantera stora arkiv effektivt redan
-              från första början. Dessutom är Git skrivet i C, vilket 
-              minskar på allt extra resursanvändande som är associerat med 
-              att ha en applikation skriven i ett mer högnivåspråk. Ett till
-              skäl till att Git är snabbt är att utvecklarna haft detta som
-              ett mål med applikationen och därför utvecklat Git för det.
+						  Ett skäl till detta är antagligen eftersom Git byggdes för
+						  arbete på Linuxkärnan, vilket innebär att det fanns behov
+						  av att det skulle kunna hantera stora arkiv effektivt redan
+						  från första början. Dessutom är Git skrivet i C, vilket 
+						  minskar på allt extra resursanvändande som är associerat med 
+						  att ha en applikation skriven i ett mer högnivåspråk. Ett till
+						  skäl till att Git är snabbt är att utvecklarna haft detta som
+						  ett mål med applikationen och därför utvecklat Git för det.
 						</div>
 
 						<div class="text">
-              Följande är ett antal mätningar jag gjorde där jag mätte 
-              hastigheten på ett antal operationer i kopior av Django-
-              arkivet i olika SCM:er, nämligen Git, Mercurial och Bazaar. Jag
-              provade också med Subversion, och tro mig: Det är långsammast
-              &ndash; ta Bazaars nummer och lägg till nätverksfördröjningar.
+						  Följande är ett antal mätningar jag gjorde där jag mätte 
+						  hastigheten på ett antal operationer i kopior av Django-
+						  arkivet i olika SCM:er, nämligen Git, Mercurial och Bazaar. Jag
+						  provade också med Subversion, och tro mig: Det är långsammast
+						  &ndash; ta Bazaars nummer och lägg till nätverksfördröjningar.
 						</div>
 
             <table>  
@@ -292,11 +292,11 @@
 						</table>
 						
 						<div class="text">
-              Slutresultatet var att för allt utom att lägga till nya filer så
-              var Git snabbast. (Även riktigt stora incheckningar, som Hg var
-              lika snabb på, men den incheckning som jag provade var så stor att
-              du antagligen aldrig kommer att göra en sådan själv &ndash;
-              vanliga incheckningar är mycket snabbare än så i Git)
+						  Slutresultatet var att för allt utom att lägga till nya filer så
+						  var Git snabbast. (Även riktigt stora incheckningar, som Hg var
+						  lika snabb på, men den incheckning som jag provade var så stor att
+						  du antagligen aldrig kommer att göra en sådan själv &ndash;
+						  vanliga incheckningar är mycket snabbare än så i Git)
 						</div>
 						
 						<table>
@@ -369,25 +369,25 @@
 						</table>
 					
 						<div class="text">
-              Den varma och kalla förgreningen är de nummer som jag fick
-              första och andra gången jag gjorde en ny gren &ndash; den 
-              andra är med en varm diskcache.
+						  Den varma och kalla förgreningen är de nummer som jag fick
+						  första och andra gången jag gjorde en ny gren &ndash; den 
+						  andra är med en varm diskcache.
 						</div>
 
 						<div class="text">
-              Det bör noteras att de höga siffrorna för att lägga till 
-              filer i arkivet trots allt var mycket stora listor med filer
-              &ndash; över 2&nbsp;000 av dem. För majoriteten av allt 
-              användande så kommer alla "add" operationer köras på mycket
-              mindre listor än detta, och då tar hela operationen hundradelar
-              av en sekund i alla dessa system. Alla andra testade operationer 
-              här är mer representativa för vad dagligt användande går ut på.
+						  Det bör noteras att de höga siffrorna för att lägga till 
+						  filer i arkivet trots allt var mycket stora listor med filer
+						  &ndash; över 2&nbsp;000 av dem. För majoriteten av allt 
+						  användande så kommer alla "add" operationer köras på mycket
+						  mindre listor än detta, och då tar hela operationen hundradelar
+						  av en sekund i alla dessa system. Alla andra testade operationer 
+						  här är mer representativa för vad dagligt användande går ut på.
 						</div>
 					
 					
 					<div class="text">
-            Dessa nummer är inte svåra att återskapa, bara klona Django-arkiven
-            genom de olika systemen och prova samma kommandon i dem alla.
+						Dessa nummer är inte svåra att återskapa, bara klona Django-arkiven
+						genom de olika systemen och prova samma kommandon i dem alla.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
@@ -432,7 +432,7 @@
 								<th>SVN</th>
 							</tr>
 							<tr>
-								<td>Arkivet självt</td>
+								<td>Enbart arkivet</td>
 								<td class="sweet">24M</td>
 								<td>34M</td>
 								<td>45M</td>
@@ -463,7 +463,7 @@
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Olikt de andra systemen så har Git det som kallas för "Förberedelseområdet"
+							Olikt de andra systemen så har Git vad som kallas för "Förberedelseområdet"
 							("staging area"), eller "Registret" ("index"). Detta är ett mellansteg för
 							dina ändringar så du kan ordna till dem så att de ser ut som du vill innan 
 							de checkas in.
@@ -478,7 +478,7 @@
 						<div class="center"><img src="images/index1.png" alt="lägg till, checka in diagram" /></div>
 						
 						<div class="text">
-						  Allt detta betyder också att du kan förbereda delar av en modifierad fil.
+							Allt detta betyder också att du kan förbereda delar av en modifierad fil.
 							Borta är dagarna där det är ett problem med att du gjort två orelaterade 
 							ändringar i samma fil utan att checka in den första innan du började på 
 							den andra. Med Git kan du bara förbereda ena ändringen, checka in den och 
@@ -492,7 +492,7 @@
 							så kommer Git att förbereda alla ändrade filer och sedan checka in dem.
 						</div>
 						
-						<div class="center"><img src="images/index2.png" alt="bara incheckning diagram" /></div>
+						<div class="center"><img src="images/index2.png" alt="arbetsflödesdiagram för enbart incheckning" /></div>
 					</div>
 	    </div>
 
@@ -509,7 +509,7 @@
 					<div class="contents">
 
 					  <div class="text">
-              En av de häftigaste finesserna med alla de distribuerade versionshanterarna, Git
+							En av de häftigaste finesserna med alla de distribuerade versionshanterarna, Git
 							inkluderad, är att de är distribuerade. Det betyder att istället för att göra en
 							utcheckning av ett arkiv så klonar du det.
             </div>
