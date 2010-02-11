@@ -412,12 +412,12 @@
 	
 					<div class="contents">
 						<div class="text">
-							Följande nummer är tagna från kloner av Django-projektets alla halvofficiella 
-							Git-arkiv vid samma tidpunkt i historiken.
+						    Git är sparsam med diskutrymme. Din Git-mapp kommer normalt vara
+						    bara aningen större än motsvarande SVN-utcheckning &mdash; och i vissa
+							fall till och med mindre (tydligen kan mycket samlas i .svn-mappar).
 
-						    Git är jättebra på att spara diskutrymme. Din Gitmapp kommer (generellt)
-						    nätt och jämt vara större än en SVN-utcheckning &mdash; till och med mindre i vissa
-						    fall (tydligen kan massor av saker hamna i .svn-mapparna).
+							Följande siffror baseras på kloner av Django-projektets olika halvofficiella 
+							arkiv, gjorda vid samma tidpunkt i historiken.
 						</div>
 
 						<table>
@@ -443,12 +443,6 @@
 								<td class="compare">61M</td>
 							</tr>
 						</table>
-						
-						<div class="text"><small>
-							* den andra Bzr-mätningen är tagen efter att jag hade kört 'bzr pack',
-							vilket jag trodde skulle göra projektbasen mindre, men resulterade i att den blev
-							väldigt mycket större av någon anledning.
-						</small></div>
 
 					</div>
 	    </div>
@@ -473,7 +467,7 @@
 						</div>
 						<div class="text">
 							Det häftiga med förberedelseområdet är att du kan lägga till ändringar
-							allt eftersom ändringar blir färdiga för att bygga upp din incheckning
+							allt eftersom de blir klara och du kan bygga upp din incheckning
 							i steg. Vid incheckningen kommer de ändringar med som du valt, istället
 							för att på gammalt sätt välja ut kompletta filer att checka in.
 						</div>
@@ -514,19 +508,23 @@
 					  <div class="text">
 							En av de häftigaste finesserna med alla de distribuerade versionshanterarna, Git
 							inkluderad, är att de är distribuerade. Det betyder att istället för att göra en
-							utcheckning av ett arkiv så klonar du det.
+							utcheckning av ett arkiv så klonar du arkivet.
             </div>
             <div class="text">
-							En positiv konsekvens av detta är att även om ni arbetar från ett centraliserat
-							flöde så kommer alla utvecklare att ha en så gott som full backup av huvudservern
-							utifall servern råkar ut för ett fel eller än korruption. Det finns alltid redundans
-							så länge det inte bara finns en utvecklare på en dator.
+							En positiv effekt är att även om ni arbetar enligt en centraliserad
+							modell, så kommer alla utvecklare att ha en närmast komplett backup av
+							er centrala server. De kan allihop användas för att återskapa en kopia
+							på er centrala server för ifall centralarkivet skulle gå sönder eller
+							råka ut för datakorruption.
+							Så snart flera utvecklare eller servrar har en uppdaterad klon så har ni
+							en skyddande redundans.
             </div>
 
             <div class="text">
-							Allt detta saktar inte ned saker och ting mycket heller. I snitt var en utcheckning
-							i SVN endast marginellt snabbare än någon annan av alla distribuerade versionshanterarna.
-							Bland alla DSCM:er som jag testade var Git det snabbaste verktygen.
+							Denna redundans saktar heller inte ned saker och ting något särskilt.
+							I snitt var en utcheckning med SVN endast marginellt snabbare än de
+							distribuerade versionshanterarna. Av alla distribuerade SCM:er jag
+							testat var Git snabbast.
 					  </div>
 
 						<table>
@@ -572,8 +570,8 @@
 					
 					<div class="text">
 						En av de fantastiska sakerna med Git är att eftersom det är distribuerat
-						och har ett så överlägset bra greningssystem så kan man använda Git med
-						i stort sett vilket arbetsflöde man vill utan problem.
+						och har en så överlägset bra hantering av förgreningar så kan man använda
+						Git utan problem för nästan vilket arbetsflöde man vill.
 					</div>
 					
 					<h3>Subversion-liknande flöde</h3>
@@ -589,38 +587,35 @@
 					
 					<div class="center"><img src="images/workflow-a.png" alt="graf över subversion-liknande flöde" /></div><br/>
 					
-					<h3>Flöde med Integrationsledare</h3>
+					<h3>Flöde med integrationsledare</h3>
 
 					<div class="text">
 						Ett annat flöde som är vanligt med Git är det med en integrationsledare
 						&mdash; en person som checkar in ändringar i det "välsignade" arkivet, och 
-						sedan flera utvecklare som clonar det arkivet och arbetar på egna versioner
+						sedan flera utvecklare som klonar det arkivet och arbetar på egna versioner
 						av det, för att sedan be ledaren att hämta in ändringar från dessa. Detta
-						flöde ser man oftst hos fri och öppen mjukvara och hos GitHub.
+						flöde ser man ofta hos fri och öppen mjukvara och på GitHub.
 					</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="graf över integrationsledareflödet" /></div><br/>
 
-					<h3>Diktator och Löjtnanter</h3>
+					<h3>Diktator och löjtnanter</h3>
 
 					<div class="text">
-						För mer massiva projekt kan man arbeta efter samma flöde som används av Linux-
-						kerneln, där ett flertal personer (de så kallade "Löjtnanterna") är ansvariga 
-						för egna specifika delar av projektet och sedan tar in alla ändringar som rör
-						den del som de ansvarar över. Sedan kan en annan ledare ("Diktatorn") ta de 
-						ändringar som dennes löjtnanter godkänt och sammanfläta i det "välsignade"
-						arkivet. Alla övriga utvecklare klonar det väsignade arkivet när de ska arbeta
-						på något.
+						För mer massiva projekt kan man arbeta efter samma flöde som används av
+						Linux-kärnan, där flera personer (så kallade "Löjtnanter") ansvarar för
+						varsin del av projektet. De tar sedan hand om ändringar som rör deras del.
+						Sedan kan en annan ledare ("Diktatorn") ta in de ändringar som
+						löjtnanterna godkänt och sammanfläta i det centrala "välsignade" arkivet.
 					</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="graf över diktator och löjtnanter-flödet" /></div><br/>
-					
+
 					<div class="text">
-						Git är väldigt flexibelt när det kommer till detta, så du kan blanda och skapa
-						dina egna arbetsflöden. Det är inget specifikt inom Git som avgör hur du skall
-						arbeta med din kod.
-          </div>
-					
+						Om igen, Git är väldigt flexibelt vad gäller olika arbetsflöden, så du kan
+						skapa egna arbetsflöden efter behov.
+					</div>
+
 				</div>
 	    </div>
 	
@@ -641,32 +636,30 @@
           <img style="float:right; padding:10px" src="images/octocat.png" alt="octocat" />
 
 					<div class="text">
-						Jag <em>kan</em> vara partisk här, eftersom jag är anställd hos 
-						<a href="http://www.github.com">GitHub</a>, men jag la till denna sektion
+						Jag <em>kanske</em> är partisk här, eftersom jag är anställd hos 
+						<a href="http://www.github.com">GitHub</a>, men jag lade till denna sektion
 						ändå eftersom så många människor säger att GitHub var ett specifikt skäl 
-						till att de började använda Git.
+						till att de valde Git.
 					</div>
 
 					<div class="text">
-						GitHub är ett skäl till att använda Git för många människor eftersom
-						det är mer som ett socialt nätverk för kod än bara ett webbhotell. Folk
-						hittar projekt och kodbaser som liknar det de själva håller på med och
-						kan enkelt skapa förgreningar av de projekten och bidra med egna ändringar.
-						Detta skapar en stor närskap runt Git och projekten som finns här.
+						GitHub är ett skäl att använda Git för många människor eftersom Github är
+						mer som ett socialt nätverk för kod än en enkel lagringsyta. Folk hittar
+						andra utvecklare eller projekt som liknar vad de själva håller på med och
+						kan enkelt skapa förgreningar och bidra med sina egna ändringar.
+						Detta skapar en stor gemenskap runt Git och runt projekten som använder Git.
 					</div>
 					
 					<div class="text">
-						Det finns andra tjänster, både för Git och för de andra SCM:er, men få är
-						så användarinriktade med en sådan social fokus, och ingen av dem har ens
-						i närheten så många användare.
-						Den sociala aspekten är störtskön, och kombinationen av de ovan nämnda finesserna
-						gör att utveckling med Git och GitHub är en mycket bra kombination för att snabbt
-						utveckla öppen mjukvara.
+						Det finns andra tjänster, både för Git och för de andra SCM:er, men få är så
+						användarinriktade eller socialt fokuserade som Github. Och ingen av dem har
+						ens i närheten så många användare. Den sociala aspekten är jätteviktig och
+						kombinationen av Git och GitHub är utmärkt för utveckling av öppen mjukvara.
 					</div>
 
 					<div class="text">
-						Denna typ av community är helt enkelt inte ens tillgänglig med någon annan SCM.
-          </div>
+						En gemenskap som GitHub finns helt enkelt inte runt något annan SCM-verktyg.
+					</div>
 
 				</div>
 	    </div>
@@ -693,19 +686,18 @@
         
 				<div class="contents">
 					<div class="text">
-						En gång i tiden var detta inte sant &mdash; tidigt i Gits liv var det inte så
-						mycket ett SCM som en bunt verktyg för att göra versionshanterande filsystem
-						som fungerade distribuerat. Idag &ndash; å andra sidan &ndash; har dess 
-						inlärningskurva blivit mer lik den hos andra SCM:er, och t.o.m. bättre än några
-						andra.
+						En gång i tiden var detta inte sant &mdash; tidiga versioner av Gits var
+						inte så mycket ett SCM som en bunt verktyg för att arbetta med distribuerade
+						versionshanterande filsystem och svårt att lära sig. Idag är Gits kommandon
+						och inlärningskurva ganska lik andra SCM-verktyg och i vissa fall bättre.
 					</div>
 
 					<div class="text">
 						Detta är givetvis mycket svårt att bevisa objektivt utan någon form av studie,
 						så jag kommer bara att visa skillnaden mellan <code>help</code>-kommandot för
-						Git och Mercurial. Jag har markerat de kommandon som är identiska eller mycket 
-						lika mellan de olika systemen. I Mercurial get <code>help</code> en lista på
-						ca. 40 kommandon.
+						Git och Mercurial. Jag har markerat de kommandon som är mycket 
+						lika mellan de två systemen. I Mercurial ger <code>hg help</code> en lista
+						med cirka 40 kommandon och för Git visar listan 21 kommandon.
 					</div>
 				
 					<table class="help">
@@ -761,12 +753,12 @@ show       Show various types of objects
 				</table>
 				
 				<div class="text">
-					Före Git 1.6 fanns alla Git-kommandon i systemets kommandosökvägar, vilket
-					var ganska förvirrande för många. Även om Git fortfarande förstår alla 
-					dessa kommandon så är det nu endast <code>git</code> som finns i 
-					kommandosökvägen. Om du ser på Mercurial och Git så har de nästan exakt
-					likadana uppsättningar kommandon och hjälpen är mycket lik &mdash; det är
-					väldigt liten skillnad mellan dem när det gäller användargränssnittet.
+					Före Git 1.6 fanns alla Git-kommandon (fler än 21!) i systemets sökväg, vilket
+					förvirrade många. Även om Git fortfarande förstår alla 
+					dessa kommandon är det nu endast <code>git</code> som finns i 
+					kommandosökvägen. Så om du jämför Mercurial och Git så har de nästan exakt
+					likadana kommandon och liknande hjälpsidor &mdash; det är
+					väldigt liten skillnad mellan dem vid användning från kommandodraden.
 				</div>
 				
 				<div class="text">
