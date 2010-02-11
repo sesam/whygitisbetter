@@ -836,13 +836,7 @@ show       Show various types of objects
         return hidden
       })
 
-      $('#menu span').css('cursor', 'pointer').click(function() {
-        $('.section .contents').hide()
-        showSectionsForSCM(this.innerHTML)
-        document.location.hash = this.innerHTML
-      }) 
-
-      $('.args span').css('cursor', 'pointer').click(function() {
+      $('.lang').css('cursor', 'pointer').click(function() {
         $('.section .contents').hide()
         showSectionsForSCM(this.innerHTML)
         document.location.hash = this.innerHTML
